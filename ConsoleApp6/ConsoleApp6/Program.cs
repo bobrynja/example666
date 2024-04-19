@@ -8,44 +8,19 @@ namespace ConsoleApp6
 {
 
 
-    class UserInfo
+    Person tom = new Person();  // создание объекта класса Person
+
+    // определение класса Person
+    class Person
     {
-        // Поля класса
-        public string Name, Family, Adress;
-        public byte Age;
+        public string name = "Undefined";
+        public int age;
 
-        // Метод, выводящий в консоль контактную информацию
-        public void writeInConsoleInfo(string name, string family, string adress, byte age)
+        public void Print()
         {
-            Console.WriteLine("Имя: {0}\nФамилия: {1}\nМестонахождение: {2}\nВозраст: {3}\n", name, family, adress, age);
+            Console.WriteLine($"Имя: {name}  Возраст: {age}");
         }
-
     }
-
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            UserInfo myInfo = new UserInfo();
-
-            myInfo.Name = "Alexandr";
-            myInfo.Family = "Erohin";
-            myInfo.Adress = "ViceCity";
-            myInfo.Age = 26;
-
-            // Создадим новый экземпляр класса UserInfo
-            UserInfo myGirlFriendInfo = new UserInfo();
-
-            myGirlFriendInfo.Name = "Elena";
-            myGirlFriendInfo.Family = "Korneeva";
-            myGirlFriendInfo.Adress = "ViceCity";
-            myGirlFriendInfo.Age = 22;
-
-            // Выведем информацию в консоль
-            myInfo.writeInConsoleInfo(myInfo.Name, myInfo.Family, myInfo.Adress, myInfo.Age);
-            myGirlFriendInfo.writeInConsoleInfo(myGirlFriendInfo.Name, myGirlFriendInfo.Family, myGirlFriendInfo.Adress, myGirlFriendInfo.Age);
-
-            Console.ReadLine();
-        }
+}
     }
 }
